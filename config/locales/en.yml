@@ -1,0 +1,100 @@
+en:
+  activerecord:
+    models:
+      user: 'User'
+      registration_detail: 'Registration'
+    attributes:
+      user:
+        email: 'Email'
+        password: 'Password'
+        crypted password: 'Password'
+      registration_token:
+        email: 'Email'
+        token: 'token'
+    errors:
+      models:
+        user:
+          attributes:
+            role:
+              invalid: 'Invalid customer role'
+              can_not_assign: "You can't assign this customer role"
+              can_not_change: "You can't change this customer's customer role"
+            full_name:
+              blank: '%{attribute} cannot be blank'
+              taken: '%{attribute} is taken'
+              too_long: "%{attribute} is more than symbols max count"
+            email:
+              blank: '%{attribute} cannot be blank'
+              taken: '%{attribute} Already Exists'
+              invalid: 'is required field, please check email format - email@example.com'
+            password:
+              blank: 'is not filled in'
+              password_format: 'Should be more than 8 symbols containing big and little letter, one symbol'
+              crypted password: 'Password'
+        registration_detail:
+          attributes:
+            email:
+              blank: 'cannot be blank'
+              invalid: 'is required field, please check email format - email@example.com'
+            token:
+              blank: "Can't be blank"
+              taken: "ID number is already used"
+        jogging:
+          attributes:
+            duration:
+              blank: "is a required field and it's format must be hh:mm:ss (hh should be in [0..24] range)"
+              invalid_time: "is a required field and it's format must be hh:mm:ss (hh should be in [0..24] range)"
+            distance:
+              blank: "Can't be blank"
+              invalid: "Please check distance value"
+            lat:
+              blank: "Can't be blank"
+              invalid: 'Please check latitude  value'
+            lon:
+              blank: "Can't be blank"
+              invalid: "Please check longitude value"
+            date:
+              blank: "Can't be blank"
+              after: ", please check provided info, it's format should be DD-MM-YYYY"
+              invalid_date: 'format must be DD-MM-YYYY'
+  errors:
+    internal_server_error: "System is interrupted. Please try again later or address the administration"
+    unauthorized: 'Could not authorize'
+    wrong_email: 'Email is incorrect'
+    data_not_uniq: 'Entered information is already used'
+    unaccepted_error: 'Something unacceptable occurred, please contact our support team'
+    email_not_uniq: 'The User is already registered with this email'
+    token_not_found: 'Token not found'
+    username_already_taken: 'Username already used'
+    validation_problems: 'Validation Errors'
+    invalid_token: 'Registration link is invalid, Please check your email'
+    registration_invalid_time: 'Invitation expired'
+    invalid_password: 'Password is invalid'
+    password_format: 'should be more than 8 symbols containing big and little letter, one symbol'
+    token_expired: 'Link not valid or expired. Please Try generating a new link'
+    view_invalid: 'You can not view this customer'
+    old_password: 'You have already used this password'
+    passwords_dont_match: "The characters entered in the password fields do not match"
+    user_actived: 'User activated'
+    user_deactivated: 'User deactivated'
+    user_must_exist: 'User must exist'
+    already_activated: 'User already activated'
+    not_activated: 'User is not activate'
+    user_not_found: 'User not found'
+    jogging_not_found: 'Jogging not found'
+    invalid_email: 'Please check email format - email@example.com'
+    duplicated: 'Already registered'
+    duplicated_email: 'User with such email is already activated'
+    permission_denied: 'Not allowed'
+    invalid_role: "Role you entered is invalid, please check"
+    invalid_id: "%{model} with such id doesn't exist"
+    on_or_before_message: "must not be future"
+    admin_destroy_denied: "System has only one admin, you are not allowed to do this operation"
+    invalid_filter_format: "Filter Format is invalid -- it should be(field eq/ne/gt/lt 'value')"
+    duration_invalid: "invalid Duration value be hh:mm:ss"
+
+    auth:
+      wrong_credentials: 'Invalid username or password'
+      blank_username: 'Please enter the username'
+      blank_password: 'Please enter the password'
+      credentials_required: "Please enter username or password"

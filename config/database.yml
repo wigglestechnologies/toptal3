@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username:  <%= ENV['JohnDoeProject_JOGGING_DATABASE_USERNAME'] %>
+  password:  <%= ENV['JohnDoeProject_JOGGING_DATABASE_PASSWORD'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: tj_home_project_dev
+  adapter: postgresql
+  encoding: unicode
+  pool: 100
+
+test:
+  <<: *default
+  database: tj_home_project_test
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: 100
+production:
+  <<: *default
+  database: take-home-project_production
+  username: take-home-project
+  password: <%= ENV['TAKE-HOME-PROJECT_DATABASE_PASSWORD'] %>
